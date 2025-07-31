@@ -248,12 +248,12 @@ public class GangTasks : IPlayerTaskGroup
     public string GetGenericFailMessage()
     {
         List<string> Replies = new List<string>() {
-                        $"You fucked that up pretty bad.",
-                        $"Do you enjoy pissing me off? The whole job is ruined.",
-                        $"You completely fucked up the job",
-                        $"The job is fucked.",
-                        $"How did you fuck this up so badly?",
-                        $"You just cost me a lot with this fuckup.",
+                        $"Mày làm nó hỏng tanh bành con mẹ nó rồi.",
+                        $"Mày thích chọc tức tao lắm đúng không? Cả phi vụ giờ vỡ lở hết mẹ rồi.",
+                        $"Mày phá nát mẹ cái job rồi.",
+                        $"Job này toang mẹ nó rồi.",
+                        $"Mày làm cái quái gì mà hỏng nặng vãi vậy hả?",
+                        $"Cú lộn xộn này của mày làm tao bay cả đống tiền đấy.",
                         };
         return Replies.PickRandom();
     }
@@ -270,11 +270,11 @@ public class GangTasks : IPlayerTaskGroup
     public void SendGenericPickupMoneyMessage(PhoneContact contact,string placetypeName, GameLocation gameLocation, int MoneyToRecieve)
     {
         List<string> Replies = new List<string>() {
-                                $"Seems like that thing we discussed is done? Come by the {placetypeName} on {gameLocation.FullStreetAddress} to collect the ${MoneyToRecieve}",
-                                $"Word got around that you are done with that thing for us, Come back to the {placetypeName} on {gameLocation.FullStreetAddress} for your payment of ${MoneyToRecieve}",
-                                $"Get back to the {placetypeName} on {gameLocation.FullStreetAddress} for your payment of ${MoneyToRecieve}",
-                                $"{gameLocation.FullStreetAddress} for ${MoneyToRecieve}",
-                                $"Heard you were done, see you at the {placetypeName} on {gameLocation.FullStreetAddress}. We owe you ${MoneyToRecieve}",
+                                $"Nghe nói vụ đó mày làm xong rồi hả? Ghé qua {placetypeName} ở {gameLocation.FullStreetAddress} lấy ${MoneyToRecieve} đi",
+                                $"Nghe nói mày xử xong chuyện đó rồi. Quay lại {placetypeName} ở {gameLocation.FullStreetAddress} lấy tiền – ${MoneyToRecieve} đang chờ",
+                                $"Quay về {placetypeName} ở {gameLocation.FullStreetAddress} mà nhận ${MoneyToRecieve}",
+                                $"{gameLocation.FullStreetAddress} cho ${MoneyToRecieve}",
+                                $"Nghe nói mày xong rồi. Gặp ở {placetypeName} chỗ {gameLocation.FullStreetAddress}. Tao còn nợ mày ${MoneyToRecieve}",
                                 };
         Player.CellPhone.AddScheduledText(contact, Replies.PickRandom(), 1, false);
     }
@@ -282,11 +282,11 @@ public class GangTasks : IPlayerTaskGroup
     public void SendHitSquadMessage(PhoneContact contact)
     {
         List<string> Replies = new List<string>() {
-                                $"I got some guys out there looking for you. Where you at?",
-                                $"You hiding from us? Not for long.",
-                                $"See you VERY soon.",
-                                $"We will be seeing each other shortly.",
-                                $"Going to get real very soon.",
+                                $"Tao có mấy thằng đang lùng mày ngoài kia. Mày trốn ở đâu rồi hả?",
+                                $"Mày tưởng trốn được tụi tao à? Không lâu đâu.",
+                                $"Sắp gặp nhau rồi đấy, rất sớm thôi.",
+                                $"Chúng ta sẽ gặp lại nhau sớm thôi.",
+                                $"Chuyện này sắp căng thật rồi đó.",
                                 };
         Player.CellPhone.AddScheduledText(contact, Replies.PickRandom(), 0, true);
     }
